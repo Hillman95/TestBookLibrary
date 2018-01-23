@@ -1,7 +1,6 @@
 package com.hillman.testbooklibrary.activity;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,13 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.hillman.testbooklibrary.R;
 import com.hillman.testbooklibrary.adapters.BooksAdapter;
 import com.hillman.testbooklibrary.models.Book;
 import com.hillman.testbooklibrary.utils.BookManager;
-import com.hillman.testbooklibrary.utils.RealmHelper;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     BooksAdapter adapter;
     RecyclerView recyclerView;
     List<Book> books;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-
+        fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(v -> {
               LayoutInflater inflater = MainActivity.this.getLayoutInflater();

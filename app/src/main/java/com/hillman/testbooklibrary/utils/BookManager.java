@@ -1,10 +1,7 @@
 package com.hillman.testbooklibrary.utils;
 
 import android.app.Activity;
-
 import com.hillman.testbooklibrary.models.Book;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +17,7 @@ public class BookManager {
     }
 
     public void addBooks(List<Book> books){
-        RealmHelper.with(context).addBook(books);
+        RealmHelper.with(context).addBooks(books);
     }
 
     public List<Book> getBooks(){
@@ -36,9 +33,11 @@ public class BookManager {
     }
 
 //    public List<Book> getBooksFromApi(){
+//
 //        return new ArrayList<>();
 //    }
 
-
-
+//    public void saveFromApiToRealm(){
+//        RealmHelper.with(context).addBooks(getBooksFromApi());
+//    }
 }

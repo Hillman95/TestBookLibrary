@@ -6,13 +6,9 @@ package com.hillman.testbooklibrary.utils;
 
 import android.app.Activity;
 import android.app.Application;
-
 import com.hillman.testbooklibrary.models.Book;
-
 import java.util.List;
-
 import io.realm.Realm;
-import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 
@@ -50,7 +46,7 @@ public class RealmHelper {
         realm.refresh();
     }
 
-    public void addBook(List<Book> books){
+    public void addBooks(List<Book> books){
         realm.beginTransaction();
         realm.copyToRealm(books);
         realm.commitTransaction();
@@ -68,7 +64,6 @@ public class RealmHelper {
         realm.commitTransaction();
 
     }
-
 
     public void updateBook(Book book){
         realm.beginTransaction();

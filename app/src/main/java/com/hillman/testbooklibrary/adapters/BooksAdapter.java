@@ -3,7 +3,6 @@ package com.hillman.testbooklibrary.adapters;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,14 +11,11 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.hillman.testbooklibrary.R;
 import com.hillman.testbooklibrary.models.Book;
 import com.hillman.testbooklibrary.utils.BookManager;
 import com.hillman.testbooklibrary.utils.RealmHelper;
-
 import java.util.List;
-
 import io.realm.Realm;
 
 /**
